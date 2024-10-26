@@ -1,6 +1,6 @@
 const web_socket = require('ws');
 
-const web_server_server = new web_socket.Server({ port:8080});
+const web_socket_server = new web_socket.Server({ port:8080});
 
 let clients = [];
 

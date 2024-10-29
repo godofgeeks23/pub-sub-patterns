@@ -12,6 +12,7 @@ server.listen(3000, () => {
   console.log("server listening at port 3000");
 });
 
+// when connection is established
 io.on("connection", (socket) => {
   console.log("new client connected!");
 

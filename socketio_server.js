@@ -16,6 +16,7 @@ server.listen(3000, () => {
 io.on("connection", (socket) => {
   console.log("new client connected!");
 
+  // subscribe to a channel
   socket.on("subscribe", (channel) => {
     console.log(`subscribing to channel: ${channel}`);
     socket.join(channel);

@@ -23,7 +23,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("unsubscribe", (channel) => {
-    console.log(`leaving channel: ${channel}`);
+    console.log(`Leaving channel: ${channel}`);
     socket.leave(channel);
   });
 

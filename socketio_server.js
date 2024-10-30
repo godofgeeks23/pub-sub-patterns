@@ -28,7 +28,7 @@ io.on("connection", (socket) => {
   });
 
   setInterval(() => {
-    io.to("channel1").emit("message", "Hello from channel1!");
-    io.to("channel2").emit("message", "Hello from channel2!");
+    io.to("channel1").emit("message", "Hello from channel channel1!");
+    io.to("channel2").emit("message", "Hello from channel channel2!");
   }, 3000);
 });

@@ -18,7 +18,7 @@ io.on("connection", (socket) => {
 
   // subscribe to a channel
   socket.on("subscribe", (channel) => {
-    console.log(`subscribing to channel: ${channel}`);
+    console.log(`Subscribing to channel: ${channel}`);
     socket.join(channel);
   });
 

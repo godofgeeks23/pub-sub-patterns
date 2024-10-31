@@ -4,6 +4,7 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
 const PORT = 3000;
+const INTERVAL = 3000;
 
 // root route
 app.get("/", (req, res) => {
@@ -29,8 +30,10 @@ io.on("connection", (socket) => {
     socket.leave(channel);
   });
 
+  const channels = ["channel1", "channel2"];
+
   setInterval(() => {
     io.to("channel1").emit("message", "Hello from channel: channel1!");
     io.to("channel2").emit("message", "Hello from channel: channel2!");
-  }, 3000);
+  }, INTERVAL);
 });

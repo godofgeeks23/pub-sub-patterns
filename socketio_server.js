@@ -3,12 +3,14 @@ const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
+const PORT = 3000;
+
 // root route
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-server.listen(3000, () => {
+server.listen(PORT, () => {
   console.log("server listening at port 3000");
 });
 

@@ -8,6 +8,6 @@ socket.on('connect', () => {
     socket.emit('subscribe', 'channel1');
 
     socket.on('message', (message) => {
-        console.log(`Got message: ${message}`)
+        console.log(`Got message from WS server: ${message}`)
     })
 })

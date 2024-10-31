@@ -6,7 +6,7 @@ let clients = [];
 
 web_socket_server.on("connection", function connection(ws) {
   clients.push(ws);
-  console.log("New client connected");
+  console.log("New client connected!");
 
   ws.on("message", function incoming(message) {
     console.log("Received message - ", message);

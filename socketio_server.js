@@ -6,7 +6,7 @@ const io = require("socket.io")(server);
 const PORT = 3000;
 const INTERVAL = 3000;
 
-// root route
+// root route for http web server
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });

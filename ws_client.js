@@ -7,7 +7,7 @@ ws.onopen = function () {
 };
 
 ws.onmessage = function (event) {
-  console.log("Received message - ", event.data);
+  console.log("Received message: ", event.data);
 };
 
 ws.onclose = function () {
